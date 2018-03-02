@@ -33,4 +33,35 @@ class noodoedemoTests: XCTestCase {
         }
     }
     
+    func testCheckPassword() {
+        XCTAssertTrue(Utilities.checkPassword(password:"abtZsq"))
+        XCTAssertTrue(Utilities.checkPassword(password:"123456abcdefghijklmnopqrstuvwxyz"))
+        XCTAssertFalse(Utilities.checkPassword(password:"0123456abcdefghijklmnopqrstuvwxyz"))
+        XCTAssertFalse(Utilities.checkPassword(password:""))
+        XCTAssertFalse(Utilities.checkPassword(password:"!~#+"))
+    }
+    
+    func testCheckUsername() {
+        XCTAssertTrue(Utilities.checkUsername(username: "123456abcdefghijklmnopqrstuvwxyz"))
+        XCTAssertFalse(Utilities.checkUsername(username: "0123456abcdefghijklmnopqrstuvwxyz"))
+        XCTAssertFalse(Utilities.checkUsername(username: ""))
+        XCTAssertFalse(Utilities.checkUsername(username: "!~#+"))
+    }
+    
+    // WebManager login
+    func testLogin() {
+        let expectation = self.expectation(description: "Expectation")
+        WebManager.sharedManager.login(username: "test2@qq.com", password: "test1234qq", completion: { (data) in
+            if data["error"] != nil {
+                XCTAssertTrue(false)
+            }
+            else {
+                XCTAssertTrue(true)
+            }
+            expectation.fulfill()
+        })
+        self.waitForExpectations(timeout: 30) { (exp) in
+            
+        }
+    }
 }
