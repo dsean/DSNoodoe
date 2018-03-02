@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9F1727142049031E0002A1E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1727132049031E0002A1E1 /* AppDelegate.swift */; };
-		9F1727162049031E0002A1E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1727152049031E0002A1E1 /* ViewController.swift */; };
 		9F1727192049031E0002A1E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1727172049031E0002A1E1 /* Main.storyboard */; };
 		9F17271B2049031E0002A1E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F17271A2049031E0002A1E1 /* Assets.xcassets */; };
 		9F17271E2049031E0002A1E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F17271C2049031E0002A1E1 /* LaunchScreen.storyboard */; };
 		9F1727292049031E0002A1E1 /* noodoedemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1727282049031E0002A1E1 /* noodoedemoTests.swift */; };
+		9F172738204919260002A1E1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F172735204919260002A1E1 /* LoginViewController.swift */; };
+		9F172739204919260002A1E1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F172737204919260002A1E1 /* Utilities.swift */; };
+		9F17273D20496EE10002A1E1 /* WebManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17273C20496EE10002A1E1 /* WebManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,6 @@
 /* Begin PBXFileReference section */
 		9F1727102049031E0002A1E1 /* noodoedemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noodoedemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1727132049031E0002A1E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F1727152049031E0002A1E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F1727182049031E0002A1E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F17271A2049031E0002A1E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F17271D2049031E0002A1E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,9 @@
 		9F1727242049031E0002A1E1 /* noodoedemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = noodoedemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F1727282049031E0002A1E1 /* noodoedemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noodoedemoTests.swift; sourceTree = "<group>"; };
 		9F17272A2049031E0002A1E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F172735204919260002A1E1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9F172737204919260002A1E1 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9F17273C20496EE10002A1E1 /* WebManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,8 @@
 		9F1727122049031E0002A1E1 /* noodoedemo */ = {
 			isa = PBXGroup;
 			children = (
+				9F172733204919260002A1E1 /* Classes */,
 				9F1727132049031E0002A1E1 /* AppDelegate.swift */,
-				9F1727152049031E0002A1E1 /* ViewController.swift */,
 				9F1727172049031E0002A1E1 /* Main.storyboard */,
 				9F17271A2049031E0002A1E1 /* Assets.xcassets */,
 				9F17271C2049031E0002A1E1 /* LaunchScreen.storyboard */,
@@ -94,6 +98,40 @@
 				9F17272A2049031E0002A1E1 /* Info.plist */,
 			);
 			path = noodoedemoTests;
+			sourceTree = "<group>";
+		};
+		9F172733204919260002A1E1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9F17273A20496EE10002A1E1 /* Model */,
+				9F172734204919260002A1E1 /* Controllers */,
+				9F172736204919260002A1E1 /* Utilities */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9F172734204919260002A1E1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F172735204919260002A1E1 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9F172736204919260002A1E1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9F172737204919260002A1E1 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9F17273A20496EE10002A1E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F17273C20496EE10002A1E1 /* WebManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F1727162049031E0002A1E1 /* ViewController.swift in Sources */,
+				9F172738204919260002A1E1 /* LoginViewController.swift in Sources */,
+				9F172739204919260002A1E1 /* Utilities.swift in Sources */,
 				9F1727142049031E0002A1E1 /* AppDelegate.swift in Sources */,
+				9F17273D20496EE10002A1E1 /* WebManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
