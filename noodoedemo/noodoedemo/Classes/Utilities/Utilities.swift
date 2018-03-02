@@ -1,10 +1,6 @@
 //
 //  Utilities.swift
-//  installer
-//
-//  Created by Sean Yang on 2017/12/29.
-//  Copyright © 2017年 qlync. All rights reserved.
-//
+
 
 import Foundation
 
