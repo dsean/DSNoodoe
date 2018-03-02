@@ -16,7 +16,7 @@ class Utilities: NSObject {
             return false
         }
         
-        let mailPattern = "^[a-z0-9._@-]+$"
+        let mailPattern = "^[A-Za-z0-9._@-]+$"
         let results = Utilities.matches(for: mailPattern, in: username)
         
         if results.count == 0 {
@@ -32,7 +32,7 @@ class Utilities: NSObject {
             return false
         }
         
-        let mailPattern = "^[a-z0-9_-]+$"
+        let mailPattern = "^[A-Za-z0-9_-]+$"
         let results = Utilities.matches(for: mailPattern, in: password)
         
         if results.count == 0 {
